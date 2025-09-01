@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Globe, Smartphone, Bot, Code2, Database, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -95,8 +96,8 @@ const Services = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Let's discuss how we can bring your ideas to life with cutting-edge technology and exceptional craftsmanship.
             </p>
-            <Button variant="hero" size="lg">
-              Get Started Today
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">Get Started Today</Link>
             </Button>
           </div>
         </div>

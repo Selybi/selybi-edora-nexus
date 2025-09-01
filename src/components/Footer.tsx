@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,28 +9,28 @@ const Footer = () => {
 
   const footerLinks = {
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Our Team", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "News & Blog", href: "#" }
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/about" },
+      { name: "Careers", href: "/contact" },
+      { name: "News & Blog", href: "/projects" }
     ],
     services: [
-      { name: "Web Development", href: "#services" },
-      { name: "Mobile Apps", href: "#services" },
-      { name: "AI Solutions", href: "#services" },
-      { name: "Cloud Services", href: "#services" }
+      { name: "Web Development", href: "/services" },
+      { name: "Mobile Apps", href: "/services" },
+      { name: "AI Solutions", href: "/services" },
+      { name: "Cloud Services", href: "/services" }
     ],
     support: [
-      { name: "Documentation", href: "#" },
-      { name: "Help Center", href: "#" },
-      { name: "Contact Support", href: "#contact" },
-      { name: "Status Page", href: "#" }
+      { name: "Documentation", href: "/projects" },
+      { name: "Help Center", href: "/contact" },
+      { name: "Contact Support", href: "/contact" },
+      { name: "Status Page", href: "/projects" }
     ],
     legal: [
-      { name: "Privacy Policy", href: "#" },
-      { name: "Terms of Service", href: "#" },
-      { name: "Cookie Policy", href: "#" },
-      { name: "GDPR", href: "#" }
+      { name: "Privacy Policy", href: "/contact" },
+      { name: "Terms of Service", href: "/contact" },
+      { name: "Cookie Policy", href: "/contact" },
+      { name: "GDPR", href: "/contact" }
     ]
   };
 
@@ -82,12 +83,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href}
+                    <Link 
+                      to={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -99,12 +100,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href}
+                    <Link 
+                      to={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -116,12 +117,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href}
+                    <Link 
+                      to={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -133,12 +134,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href}
+                    <Link 
+                      to={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

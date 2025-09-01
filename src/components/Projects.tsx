@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, Users, TrendingUp } from "lucide-react";
 import edoraPreview from "@/assets/edora-preview.jpg";
@@ -160,8 +161,8 @@ const Projects = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Let's collaborate to create the next breakthrough solution that will define your industry.
             </p>
-            <Button variant="hero" size="lg">
-              Start Your Project
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">Start Your Project</Link>
             </Button>
           </div>
         </div>
